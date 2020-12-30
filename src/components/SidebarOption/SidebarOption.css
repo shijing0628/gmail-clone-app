@@ -32,5 +32,8 @@
   font-weight: 300;
 }
 .sidebarOption:hover > p {
-  display: inline-block;
+  display: inline;
+}
+.sidebarOption-active > p {
+  display: inline !important;
 }
