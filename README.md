@@ -2,8 +2,14 @@
 
 2020-12-30
 
-Redux, React Router, React Hooks (useHistory to change email list to email detail page, useForm to submit an email.) react-hook-form, firebase auth, firebase real-time getting data from DB , material UI, css flex.
-<br>
+- Redux(userSlice,mailSlice),
+- React Router,
+- React Hooks (useHistory to change email list to email detail page, useForm to submit an email.) - react-hook-form (https://react-hook-form.com/get-started),
+- firebase auth, (google auth)
+- firebase real-time getting data from DB (https://console.firebase.google.com/u/0/project/- clone-8d246/firestore/data~2Femails~2FAZ1RUyuak45UcvRBSMRy) ,
+- material UI,
+- css flex.
+  <br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 

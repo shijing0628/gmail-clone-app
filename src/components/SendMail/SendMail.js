@@ -8,8 +8,9 @@ import { closeSendMessage } from '../../features/mailSlice';
 import { db } from '../../firebase'
 import firebase from 'firebase'
 
+//compose a new email pop up module , https://react-hook-form.com/get-started
 function SendMail() {
- const { register, handleSubmit, watch, errors } = useForm();
+ const { register, handleSubmit, errors } = useForm();
  const dispatch = useDispatch()
 
 
