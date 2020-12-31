@@ -7,29 +7,29 @@ import { useDispatch } from 'react-redux'
 
 function Login() {
 
- const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
- //google auth login
- const signIn = () => {
-  auth.signInWithPopup(provider)
-   .then(({ user }) => {
-    dispatch(login({
-     displayName: user.displayName,
-     email: user.email,
-     photoUrl: user.photoURL
-    }))
-   })
-   .catch(err => alert(err.message))
- }
+  //google auth login, follow google rules naming
+  const signIn = () => {
+    auth.signInWithPopup(provider)
+      .then(({ user }) => {
+        dispatch(login({
+          displayName: user.displayName,
+          email: user.email,
+          photoUrl: user.photoURL
+        }))
+      })
+      .catch(err => alert(err.message))
+  }
 
- return (
-  <div className="login">
-   <div className="login__container">
-    <img src="https://s3.amazonaws.com/smi-www/prod/wp-content/uploads/gmail-logo-2.png" alt="gmail" />
-    <Button onClick={signIn} variant="contained" color="primary">Login</Button>
-   </div>
-  </div>
- )
+  return (
+    <div className="login">
+      <div className="login__container">
+        <img src="https://s3.amazonaws.com/smi-www/prod/wp-content/uploads/gmail-logo-2.png" alt="gmail" />
+        <Button onClick={signIn} variant="contained" color="primary">Login</Button>
+      </div>
+    </div>
+  )
 }
 
 export default Login

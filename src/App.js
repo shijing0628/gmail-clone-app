@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -11,9 +11,29 @@ import { selectSendMessageIsOpen } from './features/mailSlice'
 import { selectUser } from './features/userSlice';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router } from "react-router-dom";
+import { useDispatch } from 'react-redux'
+import { auth } from './firebase'
+import login from './features/userSlice'
+
 function App() {
   const sendMessageIsOpen = useSelector(selectSendMessageIsOpen)
   const user = useSelector(selectUser)
+  //keep google auth login, not lose after refresh, this function has problem 
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        dispatch(
+          login({
+            displayName: user.displayName,
+            email: user.email,
+            photoUrl: user.photoURL
+          })
+        )
+      }
+    })
+  }, [])
 
   return (
     <Router>

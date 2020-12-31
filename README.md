@@ -11,6 +11,21 @@
 - css flex.
   <br>
 
+![](2020-12-31-14-17-02.png)
+<br>
+
+![](2020-12-31-14-17-49.png)
+<br>
+
+![](2020-12-31-14-18-35.png)
+<br>
+
+![](2020-12-31-14-19-32.png)
+<br>
+
+![](2020-12-31-14-20-19.png)
+<br>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
